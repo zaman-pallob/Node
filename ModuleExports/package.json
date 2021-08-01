@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "eslint-plugin-import": "^2.23.4"
+  }
+}
