@@ -1,8 +1,22 @@
 const http= require("http");
 
-const server=http.createServer();
-server.on('connection',()=>{
-    console.log("New User hit");
-});
-server.listen(4000);
-console.log("Server is running");
+const {requestHandlers}=require("./handlers");
+
+const app = {};
+
+app.config={
+    port:3000
+};
+
+app.createServer=()=>{
+    const server=http.createServer(requestHandlers);
+    server.listen(app.config.port,()=>{});
+}
+
+app.createServer();
+
+
+
+
+
+
